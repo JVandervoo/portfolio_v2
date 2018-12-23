@@ -1,0 +1,19 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/functions.scss";
+@import "../../../../styles/variables.scss";
+
+img {
+	width: 100%;
+	border: 3px solid white;
+	@include easeOutQuick;
+
+	&:hover {
+		border-color: $secondary-color;
+		filter: grayscale(30%);
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}

@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { trigger, state, style, animate, transition, group, query, animateChild, stagger } from '@angular/animations';
-import { Router } from "@angular/router";
 
 import { NavLink } from "../../models/nav-link.model";
 
@@ -53,6 +52,9 @@ import { NavLink } from "../../models/nav-link.model";
 
 export class BurgerMenuComponent implements OnInit {
 
+    @Input()
+    currentRoute: string;
+
     @Output()
     onClickLink: EventEmitter<any> = new EventEmitter<any>();
 
@@ -63,13 +65,10 @@ export class BurgerMenuComponent implements OnInit {
         { route: "contact", displayName: "Contact" },
     ]
 
-    currentRoute: string;
 
-    constructor(private router: Router) { }
+    constructor() { }
 
     ngOnInit() {
-        const url = this.router.routerState.snapshot.url.split('/');
-        this.currentRoute = url.length === 0 ? "" : url[url.length - 1];
     }
 
     clickedLink() {

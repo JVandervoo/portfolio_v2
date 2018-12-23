@@ -1,0 +1,19 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/functions.scss";
+@import "../../../styles/variables.scss";
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1.5rem;
+
+	@include breakMd {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include breakSm {
+		grid-template-columns: 1fr;
+	}
+
+
+}

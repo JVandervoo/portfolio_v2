@@ -37,3 +37,27 @@ h3 {
 .text-secondary {
 	color: $secondary-color;
 }
+
+//Buttons
+.btn {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.5rem;
+	@include easeOutQuick;
+
+	&:hover {
+		background: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($primary-color, 50);
+}
+
+.btn-light {
+	@extend .btn;
+	background: darken($primary-color, 50);
+}

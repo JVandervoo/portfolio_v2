@@ -1,0 +1,59 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/functions.scss";
+@import "../../../styles/variables.scss";
+
+.about-info {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-areas:
+		"bioimage bio bio"
+		"job1 job2 job3";
+	grid-template-columns: 1fr 1fr 1fr;
+
+	@include breakMd {
+		grid-template-areas:
+			"bioimage"
+			"bio"
+			"job1"
+			"job2"
+			"job3";
+		grid-template-columns: 1fr;
+	}
+
+	.bio-image {
+		grid-area: bioimage;
+		background: $portrait-image;
+		margin: auto;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		background-position: center;
+		background-size: cover;
+		border: 3px solid $secondary-color;
+
+		//width: 250px;
+	}
+
+	.bio {
+		grid-area: bio;
+		font-size: 1.5rem;
+	}
+
+	.job-1 {
+		grid-area: job1;
+	}
+
+	.job-2 {
+		grid-area: job2;
+	}
+
+	.job-3 {
+		grid-area: job3;
+	}
+
+	.job {
+		background: lighten($primary-color, 5);
+		padding: 2rem 1rem;
+		border-bottom: $secondary-color 5px solid;
+	}
+}

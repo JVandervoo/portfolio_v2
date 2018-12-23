@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { BaseComponent } from './components/base/base.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +20,10 @@ import { AboutComponent } from './components/about/about.component';
         HomeComponent,
         BurgerMenuComponent,
         BaseComponent,
-        AboutComponent
+        AboutComponent,
+        ProjectsComponent,
+        ProjectItemComponent,
+        ContactComponent
     ],
     imports: [
         BrowserModule,
