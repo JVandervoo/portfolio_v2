@@ -4,8 +4,8 @@
 	</div>
 	<ul class="menu-nav" @flyInFromTop @flyInFromRight>
 		<ng-container *ngFor="let navLink of navLinks">
-			<li class="nav-item current">
-				<div [routerLink]="navLink.route" class="nav-link"> {{navLink.displayName}} </div>
+			<li class="nav-item" [ngClass]="{ 'current': currentRoute === navLink.route }">
+				<div (click)="clickedLink()" [routerLink]="navLink.route" class="nav-link"> {{navLink.displayName}} </div>
 			</li>
 		</ng-container>
 	</ul>

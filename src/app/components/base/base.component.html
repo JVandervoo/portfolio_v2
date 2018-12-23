@@ -4,7 +4,7 @@
 		<div class="btn-line"></div>
 		<div class="btn-line"></div>
 	</div>
-	<app-burger-menu *ngIf="showMenu" @animateMenu></app-burger-menu>
+	<app-burger-menu *ngIf="showMenu" (onClickLink)="showMenu = false" @animateMenu></app-burger-menu>
 	<div class="page-wrapper">
 		<router-outlet></router-outlet>
 	</div>

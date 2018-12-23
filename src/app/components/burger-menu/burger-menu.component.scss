@@ -78,6 +78,7 @@
 		font-weight: 300;
 		color: set-text-color($primary-color);
 		text-decoration: none;
+		cursor: pointer;
 
 		&:hover {
 			color: $secondary-color;
