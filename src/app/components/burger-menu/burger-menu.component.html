@@ -1,0 +1,12 @@
+<nav class="menu">
+	<div class="menu-branding" @flyInFromBottom>
+		<div class="portrait"></div>
+	</div>
+	<ul class="menu-nav" @flyInFromTop @flyInFromRight>
+		<ng-container *ngFor="let navLink of navLinks">
+			<li class="nav-item current">
+				<div [routerLink]="navLink.route" class="nav-link"> {{navLink.displayName}} </div>
+			</li>
+		</ng-container>
+	</ul>
+</nav>

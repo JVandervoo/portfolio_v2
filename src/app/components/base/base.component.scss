@@ -1,0 +1,55 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/functions.scss";
+@import "../../../styles/variables.scss";
+
+.menu-btn {
+	position: absolute;
+	z-index: 3;
+	right: 2rem;
+	top: 2rem;
+	cursor: pointer;
+	@include easeOutQuick;
+
+	.btn-line {
+		width: 28px;
+		height: 3px;
+		margin: 0 0 5px 0;
+		background: set-text-color($primary-color);
+		@include easeOutQuick;
+	}
+
+	//Rotate into X with Menu Lines
+	&.close {
+		//transform: rotate(180deg);
+
+		.btn-line {
+
+			//First line - Rotate
+			&:nth-child(1) {
+				transform: translate(0px, 8px) rotate(-45deg);
+			}
+
+			//Second line - Hide
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			//Third line - Rotate
+			&:nth-child(3) {
+				transform: translate(0px, -8px) rotate(45deg);
+			}
+		}
+	}
+}
+
+.bg-img {
+	background: linear-gradient(rgba($primary-color, 0.7), rgba($primary-color, 0.7)), $home-image;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 85%;
+	min-height: 100vh;
+}
+
+.page-wrapper {
+	padding: 4rem;
+}
