@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -29,7 +30,8 @@ import { ContactComponent } from './components/contact/contact.component';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        AngularFontAwesomeModule
+        AngularFontAwesomeModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

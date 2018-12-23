@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ProjectItem } from "../../models/project-item.model";
+import { ProjectService } from 'src/app/providers/project.service';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { ProjectItem } from "../../models/project-item.model";
 })
 export class ProjectsComponent implements OnInit {
 
-    projectItems: ProjectItem[] = [
+    projectItems: ProjectItem[] = []; /*
         {
             title: 'Project 1',
             img: '../../../assets/imgs/projects/project1.jpg',
@@ -36,12 +38,22 @@ export class ProjectsComponent implements OnInit {
             git: '#',
         },
 
-    ];
+    ];*/
 
-    constructor() { }
+    constructor(private projectService: ProjectService) { }
 
     ngOnInit() {
-
+        this.projectService.getProjects().subscribe((projects: any[]) => {
+            projects.forEach(project => {
+                this.projectItems.push({
+                    id: project.id,
+                    title: project.title,
+                    img: `../../../assets/imgs/projects/project${project.id}.jpg`
+                });
+            });
+        }, (err) => {
+            window.alert(err.message);
+        });
     }
 
 }
