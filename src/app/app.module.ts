@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -14,6 +15,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
+import { ProjectEditComponent } from './components/projects/project-edit/project-edit.component';
+
 
 @NgModule({
     declarations: [
@@ -24,14 +28,17 @@ import { ContactComponent } from './components/contact/contact.component';
         AboutComponent,
         ProjectsComponent,
         ProjectItemComponent,
-        ContactComponent
+        ContactComponent,
+        ProjectDetailsComponent,
+        ProjectEditComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         AngularFontAwesomeModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

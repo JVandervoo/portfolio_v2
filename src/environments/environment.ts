@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    API_URL: "https://api.jaspervoo.com/prod"
+    API_URL: "https://api.jaspervoo.com"
 };
 
 /*

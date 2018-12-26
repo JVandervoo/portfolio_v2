@@ -1,0 +1,15 @@
+<div *ngIf="item" class="project-form">
+	<div class="title">
+		<h3 class="title-header">Title:</h3><input [(ngModel)]="item.title" type="text">
+	</div>
+	<div class="description">
+		<h3 class="description-header">Description:</h3><textarea [(ngModel)]="item.description" class="description-input"></textarea>
+	</div>
+	<div class="date">
+		<h3 class="date-header">Date:</h3><input [(ngModel)]="item.date" class="date-input">
+	</div>
+	<div class="image-link">
+		<h3 class="image-link-header">Image Link:</h3><input [(ngModel)]="item.img" class="image-link-input">
+	</div>
+	<button (click)="onSubmit()">Submit</button>
+</div>
