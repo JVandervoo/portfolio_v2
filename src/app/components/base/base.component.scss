@@ -23,7 +23,6 @@
 		//transform: rotate(180deg);
 
 		.btn-line {
-
 			//First line - Rotate
 			&:nth-child(1) {
 				transform: translate(0px, 8px) rotate(-45deg);
@@ -43,7 +42,7 @@
 }
 
 .bg-img {
-	background: linear-gradient(rgba($primary-color, 0.7), rgba($primary-color, 0.7)), $home-image;
+	background: linear-gradient(rgba($primary-color, 0.5), rgba($primary-color, 0.5)), $home-image;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 85%;
@@ -53,4 +52,7 @@
 
 .page-wrapper {
 	padding: 4rem;
+	@include breakMd {
+		padding: 1.5rem;
+	}
 }

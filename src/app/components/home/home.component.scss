@@ -1,4 +1,6 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/functions.scss";
 
 #home {
 	overflow: hidden;
@@ -13,12 +15,17 @@
 }
 
 a {
-	color: white;
+	color: set-text-color($primary-color);
 	text-decoration: none;
+	margin-right: 1rem;
+	&:hover {
+		color: $secondary-color;
+	}
 }
 
 .icons-container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+	align-items: center;
 	width: 200px;
 }

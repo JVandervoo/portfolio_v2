@@ -2,9 +2,7 @@
 @function set-text-color($color) {
 	@if (lightness($color) > 40) {
 		@return #222;
-	}
-
-	@else {
+	} @else {
 		@return white;
 	}
 }

@@ -4,12 +4,10 @@
 
 img {
 	width: 100%;
-	border: 3px solid white;
-	@include easeOutQuick;
+	transition: all 0.1s linear;
 
 	&:hover {
-		border-color: $secondary-color;
-		filter: grayscale(30%);
+		transform: translateY(-2%);
 	}
 }
 
