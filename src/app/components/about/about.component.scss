@@ -1,12 +1,10 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/functions.scss";
-@import "../../../styles/variables.scss";
-
+@import "../../../styles.scss";
 .about-info {
 	display: grid;
 	grid-gap: 2rem;
 	grid-template-areas:
 		"bioimage bio bio"
+		"title title title"
 		"job1 job2 job3";
 	grid-template-columns: 1fr 1fr 1fr;
 
@@ -14,6 +12,7 @@
 		grid-template-areas:
 			"bioimage"
 			"bio"
+			"title"
 			"job1"
 			"job2"
 			"job3";
@@ -36,9 +35,11 @@
 
 	.bio {
 		grid-area: bio;
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
-
+	.title {
+		grid-area: title;
+	}
 	.job-1 {
 		grid-area: job1;
 	}
@@ -53,7 +54,11 @@
 
 	.job {
 		background: lighten($primary-color, 5);
-		padding: 2rem 1rem;
+		padding: 2rem;
 		border-bottom: $secondary-color 5px solid;
+		p {
+			font-size: 0.9rem;
+			margin: 0rem 0rem 1.5rem 0rem;
+		}
 	}
 }
