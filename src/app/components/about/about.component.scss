@@ -56,7 +56,8 @@
 		background: lighten($primary-color, 5);
 		padding: 2rem;
 		border-bottom: $secondary-color 3px solid;
-		p {
+		p,
+		ul {
 			font-size: 0.9rem;
 			margin: 0rem 0rem 1.5rem 0rem;
 		}
