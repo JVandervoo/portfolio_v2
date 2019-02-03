@@ -1,4 +1,4 @@
-# JasperPortfolio
+# Jasper's Portfolio - Portfolio v1 remade using Angular.js
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
