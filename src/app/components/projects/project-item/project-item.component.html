@@ -2,10 +2,8 @@
 	<a [routerLink]="'details/' + item.id">
 		<img [src]="item.img" alt="Project" />
 	</a>
-	<a [routerLink]="'details/' + item.id" class="btn-light">
-		<i class="fa fa-eye"></i> {{item.title}}
-	</a>
-	<a [href]="item.git" class="btn-dark">
+	<a [routerLink]="'details/' + item.id" class="btn-light"> <i class="fa fa-eye"></i> {{ item.title }} </a>
+	<a *ngIf="item.git !== ''" [href]="item.git" class="btn-dark" target="_blank">
 		<i class="fa fa-github"></i> Github
 	</a>
 </div>

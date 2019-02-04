@@ -20,7 +20,7 @@ export class ProjectDetailsComponent implements OnInit {
             this.id = params.id;
             this.projectService.getProject(this.id).subscribe(project => {
                 this.item = project[0];
-                console.log(this.item);
+                //console.log(this.item);
             });
 
         });

@@ -10,6 +10,13 @@ body {
 	font-family: "poppins", sans-serif;
 	line-height: 1.5;
 }
+a {
+	text-decoration: none;
+	color: set-text-color($primary-color);
+	&:hover {
+		color: $secondary-color;
+	}
+}
 
 h1,
 h2,
